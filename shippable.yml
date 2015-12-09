@@ -1,9 +1,9 @@
 language: python
 
-build_image: drydock/u14pytpls:prod
+#build_image: drydock/u14pytpls:prod
 
-services:
- - mysql
+#services:
+# - mysql
 
 python:
   - 2.7
