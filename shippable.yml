@@ -1,9 +1,9 @@
 language: python
 
-#build_image: drydock/u14pytpls:prod
+build_image: drydock/u12pytpls:tip
 
-#services:
-# - mysql
+services:
+ - mysql
 
 python:
   - 2.7
@@ -24,12 +24,3 @@ script:
   - nosetests some-test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - which python && coverage run --branch some-test.py
   - which python && coverage xml -o shippable/codecoverage/coverage.xml some-test.py
-
-
-notifications:
-  email: false
-#cache: true
-after_script:
-  - cp README.md ./shippable
-
-archive: true
